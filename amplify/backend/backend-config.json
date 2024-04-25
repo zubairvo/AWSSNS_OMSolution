@@ -1,0 +1,80 @@
+{
+  "api": {
+    "InvokeBounceLambda": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "OMWBouncedEMailSNS"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "omwbounceemail": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "function": {
+    "OMWBouncedEMailSNS": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "omwEmailBounceSNS": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_OMWBouncedEMailSNS_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "OMWBouncedEMailSNS"
+        }
+      ]
+    },
+    "AMPLIFY_function_OMWBouncedEMailSNS_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "OMWBouncedEMailSNS"
+        }
+      ]
+    },
+    "AMPLIFY_function_omwEmailBounceSNS_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "omwEmailBounceSNS"
+        }
+      ]
+    },
+    "AMPLIFY_function_omwEmailBounceSNS_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "omwEmailBounceSNS"
+        }
+      ]
+    }
+  }
+}

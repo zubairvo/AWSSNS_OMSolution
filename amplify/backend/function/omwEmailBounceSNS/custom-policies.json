@@ -1,0 +1,6 @@
+[
+  {
+    "Action": ["sns:*"],
+    "Resource": ["arn:aws:sns:::*"]
+  }
+]

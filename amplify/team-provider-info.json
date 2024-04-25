@@ -1,0 +1,31 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-omwbounceemail-dev-8684a-authRole",
+      "UnauthRoleArn": "arn:aws:iam::654654411919:role/amplify-omwbounceemail-dev-8684a-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::654654411919:role/amplify-omwbounceemail-dev-8684a-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-omwbounceemail-dev-8684a-deployment",
+      "UnauthRoleName": "amplify-omwbounceemail-dev-8684a-unauthRole",
+      "StackName": "amplify-omwbounceemail-dev-8684a",
+      "StackId": "arn:aws:cloudformation:eu-west-1:654654411919:stack/amplify-omwbounceemail-dev-8684a/168c7340-022a-11ef-8dfc-025da594a82d",
+      "AmplifyAppId": "d2g6y31udzjmz6"
+    },
+    "categories": {
+      "function": {
+        "omwEmailBounceSNS": {
+          "deploymentBucketName": "amplify-omwbounceemail-dev-8684a-deployment",
+          "s3Key": "amplify-builds/omwEmailBounceSNS-6a703467526f68537562-build.zip"
+        },
+        "OMWBouncedEMailSNS": {
+          "deploymentBucketName": "amplify-omwbounceemail-dev-8684a-deployment",
+          "s3Key": "amplify-builds/OMWBouncedEMailSNS-446c7363544458504e41-build.zip"
+        }
+      },
+      "api": {
+        "omwbounceemail": {},
+        "InvokeBounceLambda": {}
+      }
+    }
+  }
+}
